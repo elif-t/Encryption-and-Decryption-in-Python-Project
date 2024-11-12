@@ -66,3 +66,36 @@ Encryption using the columnar transposition cipher is done as follows:
    Example: The resulting encrypted message reads
 
    Lnh egofa nurP nnyiits
+
+## Decrypt a Message
+Great job so far! You’ve successfully encrypted your secret message.
+
+Now, to share a secret communication with your friends, they need to be able to decrypt the message you’ve sent them. Therefore, your final task is to construct a decryption method that takes only the encrypted message as a parameter, which should return the decrypted message as a string.
+
+A message’s decryption works like the encryption process but inverted.
+
+1. Select a message to decrypt: Select an encrypted message for which you are given the key.
+
+   Example: Let’s use the following encrypted message:
+
+   Lnh egofa nurP nnyiits
+
+   We know the key for decrypting it is 6.
+   
+2. Construct the grid: Start creating the decryption grid by forming a row of cells equal in number to the ceiling of the ratio between the length of the message and the key.
+
+   Example: Create a row with ceil(22/6) = 4 cells.
+
+3. Populate initial characters: Fill in the initial characters of your encrypted message into the grid, ensuring each cell contains a single character.
+
+   Example: We can fit the first four characters in the grid.
+4. Complete the grid: Continually add rows having the same length as the original one. Populate them with the subsequent characters from your message until you have exhausted all characters. Remember that space also
+ counts as a character. And this time, the two unused cells are the final ones from the last column rather than the last row.
+
+   Example: The grid that would fit all characters in the text has six rows and four columns.
+
+5. Encrypt the message: Perform the decryption by reading the populated grid column by column, beginning from the top-left corner. Ensure you exclude the unused cells.
+
+   Example: The resulting encrypted message reads:
+
+   Learning Python is fun
