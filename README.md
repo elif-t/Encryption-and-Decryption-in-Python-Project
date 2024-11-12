@@ -47,11 +47,22 @@ Encryption using the columnar transposition cipher is done as follows:
 
 - / -- / -- / -- / -- / -- / -- /
  	 	 	 	 	 
-Populate Initial Characters: Fill in the initial characters of your message into the grid, ensuring each cell contains a single character.
-Example: We can fit the first six characters in the grid.
+4. Populate Initial Characters: Fill in the initial characters of your message into the grid, ensuring each cell contains a single character.
 
-L	e	a	r	n	i
+   Example: We can fit the first six characters in the grid.
+- L	e	a	r	n	i
 
-Complete the Grid: Continually add rows having the same length as the original one. Populate them with the subsequent characters from your message until you have exhausted all characters. Remember that space also counts as a character.
 
-Example: The grid that would fit all characters in the text has four rows and six columns.
+5. Complete the Grid: Continually add rows having the same length as the original one. Populate them with the subsequent characters from your message until you have exhausted all characters. Remember that space also      counts as a character. 	 
+
+   Example: The grid that would fit all characters in the text has four rows and six columns.
+
+6. Mark Unused Cells: Disregard any remaining unpopulated cells within the grid.
+
+   Example: We need to ignore the final two cells of the last row because no characters are placed inside.
+
+8. Encrypt the Message: Perform the encryption by reading the populated grid column by column, beginning from the top-left corner. Ensure you exclude the unused cells.
+
+   Example: The resulting encrypted message reads
+
+   Lnh egofa nurP nnyiits
